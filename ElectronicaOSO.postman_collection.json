@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "3fb9e491-78c8-4c06-b16e-c6c3d0d0f5b3",
+		"name": "ElectronicaOSO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Compras",
+			"item": [
+				{
+					"name": "AgregarCompra",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"compra\": {\r\n        \"fecha\":\"2020-10-10\", \r\n        \"idProveedor\":1,\r\n        \"usuario\":2\r\n    },\r\n    \"detalle\" : [{\r\n        \"articulo\": 1,\r\n        \"cantidad\":5,\r\n        \"precio\":2.40\r\n    }]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44390/api/compras/CrearCompra",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44390",
+							"path": [
+								"api",
+								"compras",
+								"CrearCompra"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AgregarDevolucion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"devolucion\": {\r\n        \"fecha\":\"2020-10-10\", \r\n        \"cliente\":2,\r\n        \"usuario\":3,\r\n        \"observaciones\":\"devolucion por fallas\"\r\n    },\r\n    \"detalle\" : [{\r\n        \"articulo\": 1,\r\n        \"cantidad\":5\r\n    }]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44390/api/Devolucion/AgregarDevolucion",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44390",
+							"path": [
+								"api",
+								"Devolucion",
+								"AgregarDevolucion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AgregarAjuste",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44390/api/Ajustes/AgregarAjuste",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44390",
+							"path": [
+								"api",
+								"Ajustes",
+								"AgregarAjuste"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
